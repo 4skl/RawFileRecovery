@@ -1,0 +1,5 @@
+regex abc\d[A-Z]
+bmp
+png
+docx
+hex AF45FEBC341B5

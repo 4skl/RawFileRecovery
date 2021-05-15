@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "vector": "c",
+        "xstring": "c",
+        "cstdio": "c",
+        "cstdint": "c",
+        "ostream": "c",
+        "initializer_list": "c",
+        "xutility": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

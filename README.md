@@ -15,4 +15,4 @@ FAT File system :x:\
 Others file system :x:\
 Global cleaning :x:\
 GUI :x:\
-Final cleaning :x:\
+Final cleaning :x:

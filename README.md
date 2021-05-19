@@ -13,4 +13,6 @@ NTFS File system :repeat:\
 Regex get SE :x:\
 FAT File system :x:\
 Others file system :x:\
-GUI :x:
+Global cleaning :x:\
+GUI :x:\
+Final cleaning :x:\

@@ -27,7 +27,12 @@ $(EXEC): $(OBJ)
 
 %.o: %.c
 	@$(CC) -o $@ -c $< $(CFLAGS)
+
+.PHONY : clean
+clean:
+	@rm -rf *.o
 	
 parse_filter.o : parse_filter.h
 search.o : search.h
+gui.o : gui.h
 main.o : parse_filter.o search.o

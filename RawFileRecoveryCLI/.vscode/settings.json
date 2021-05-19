@@ -6,7 +6,21 @@
         "cstdint": "c",
         "ostream": "c",
         "initializer_list": "c",
-        "xutility": "c"
+        "xutility": "c",
+        "concepts": "c",
+        "cstddef": "c",
+        "cstdlib": "c",
+        "cstring": "c",
+        "cwchar": "c",
+        "exception": "c",
+        "limits": "c",
+        "new": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "xmemory": "c",
+        "xstddef": "c",
+        "xtr1common": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

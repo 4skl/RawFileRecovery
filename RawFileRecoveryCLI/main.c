@@ -4,22 +4,27 @@
 #include <vector>
 #include <string>
 #include <iostream>
+
+#include "parse_filter.h"
 #include "search.h"
+#include "gui.h"
 
 const size_t SECTOR_MIN_SIZE = 512;
 
 int main(int argc, char ** argv)
 {
+    testGUI();
+    return 0;
     //Parse args
     std::string filePath; //https://support.microsoft.com/fr-fr/help/100027/info-direct-drive-access-under-win32
                                     //https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#win32-file-namespaces
-    std::string outputPath("not0_out.txt");
+    std::string outputPath("found_files");
 
 	int byte_searched = 0; //int ?
     int byte_replaced = -1; //if < 0 invalid
 
-    int min_chunck_size = 1;
-    int chunck_size = 256;
+    int min_chunk_size = 1;
+    int chunk_size = 256;
 
     int buffer_size = 8192;
 
@@ -79,7 +84,7 @@ int main(int argc, char ** argv)
                     if(argv[argi][3] == 'r'){
                         int v = std::stoi(argv[argi+1]);
                         if(v>0){
-                            min_chunck_size = v;
+                            min_chunk_size = v;
                         }else{
                             printf("-csr should be greater than 0\n");
                             arg_error = true;
@@ -87,7 +92,7 @@ int main(int argc, char ** argv)
                     }else if(argv[argi][3] == '\0'){
                         int v = std::stoi(argv[argi+1]);
                         if(v>0){
-                            chunck_size = v;
+                            chunk_size = v;
                         }else{
                             printf("-cs should be greater than 0\n");
                             arg_error = true;
@@ -109,7 +114,9 @@ int main(int argc, char ** argv)
                 break;
 
             case 'o':
+            if(outputPath.empty()){
                 outputPath.append(optarg);
+            }
                 break;
 
             case 'h':
@@ -151,8 +158,8 @@ int main(int argc, char ** argv)
     mbstowcs(filePathW, filePath.c_str(), filePathSZ);
 
     wprintf(L"Input file : %ls\n", filePathW);
-
-    testSearch(filePathW);
+    searchCommonFiles(filePathW, outputPath.c_str());
+    //testSearch(filePathW);
 
     free(filePathW);
     return 0;

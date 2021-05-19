@@ -8,9 +8,9 @@ After the application of the filters, theses result (associating filters and add
 :warning: Work in progress, only raw file reading SE is poorly working
 
 ## Roadmap
-File get SE :heavy_check_mark:
-NTFS File system :repeat:
-Regex get SE :x:
-FAT File system :x:
-Others file system :x:
+File get SE :heavy_check_mark:\
+NTFS File system :repeat:\
+Regex get SE :x:\
+FAT File system :x:\
+Others file system :x:\
 GUI :x:

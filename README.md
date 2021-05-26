@@ -9,6 +9,7 @@ After the application of the filters, theses result (associating filters and add
 
 ## Roadmap
 File get SE :heavy_check_mark:\
+Chunck managment :repeat:\
 NTFS File system :repeat:\
 Regex get SE :x:\
 FAT File system :x:\

@@ -3,3 +3,4 @@ bmp
 png
 docx
 hex AF45FEBC341B5
+ntfs 1To ... todo, things like files names inside it
